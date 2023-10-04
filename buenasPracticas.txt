@@ -1,0 +1,87 @@
+
+//ACOPLAMIENTO 
+El bajo acomplamiento hace que nuestros componentes sean más independientes, reutilizables, testeables y flexibles
+
+//COHESION 
+Una alta cohesión nos permite que nuestro software sea más reutilizable, ya que toda la funcionalidad relacionada está concentrada en un componente
+
+//PRINCIPIOS SOLID
+- Una clase o función debe tener una, y solamente una, razón para cambiar.
+- Una clase o función debe estar abierta para su extensión pero cerrada para su modificación.
+- En un programa compuesto por distintas clases o módulos, estos pueden ser remplazados por subclases o módulos de comportamiento compatible sin alterar el funcionamiento del programa.
+- Los clientes no deben ser forzados a depender de los métodos que no utilizan.
+- Los módulos de alto nivel no deberían depender de los módulos de bajo nivel.
+
+//APIS
+Es la interfaz pública de un componente que permite comunicarse con él para hacer uso del mismo. El propósito de una API es intercambiar datos entre diferentes sistemas.
+
+//Conceptos REST (*)
+impone condiciones sobre cómo debe funcionar una API. Los servicios web RESTful se basan en la representación de recursos como URLs y utilizan los métodos HTTP (GET, POST, PUT, DELETE, etc.)  
+
+//Protocolo HTTP (*)
+Protocolo de comunicación utilizado en la web para la transferencia de datos entre diferentes dispositivos y servidores
+
+//Estructura URL HTTP (*)
+Un URL se utiliza para ubicar un recurso en Internet.
+
+HTTP://LOCALHOST:4567/PATH/TO/PRO?ART=11
+Esquema --> Host --> Puerto --> Path --> Query string 
+
+El esquema define el protocolo a utilizar, para HTTP puede ser http o https (el protocolo seguro de HTTP).
+Host: La IP o el nombre del servidor que se quiere acceder
+El puerto en el que está escuchando el servidor HTTP
+Path es La ruta al recurso que se quiere acceder
+Query String Contiene información adicional para el servidor en forma de propiedades (atributo=valor)
+
+//API RESTful
+Una API RESTful es una implementación de una API que sigue los principios de REST. Esto significa que 
+utiliza las restricciones y principios de REST para diseñar sus puntos de acceso y operaciones.
+
+//PATHS URLs
+Usar sustantivos y no verbos. Usar plurales . Utilizar parámetros 
+
+
+//METODOS HTTP
+GET: Para obtener un recurso o colección de recursos.
+POST: Para crear un recurso o colección de recursos.
+PUT: Para actualizar todos los atributos de un recurso o conjunto de recursos existentes
+PATCH: Para actualizar solo algunos atributos de un recurso o conjunto de recursos existentes
+DELETE: Para borrar un recurso existente o el conjunto de recursos
+
+//Tipos de Parametros
+Path -----------------> /products/{id_producto}
+QueryString ----------> /products?name=’ABC’ 
+Body -----------------> {"status": "active"} 
+Header authorization -> TOKEN
+
+// CODIGOS HTTP
+200 OK --------------------> operación realizada es exitosa.
+201 CREATED ---------------> cuando utiliza el método POST para crear un nuevo recurso.
+202 ACCEPTED --------------> para confirmar la petición enviada al servidor.
+400 BAD REQUEST -----------> cuando falla la validación de entrada del lado del cliente.
+401 UNAUTHORIZED ----------> si el usuario o el sistema no está autorizado para realizar una determinada operación.
+403 FORBIDDEN -------------> si el usuario o el sistema no está autorizado para realizar una determinada operación.
+404 NOT FOUND -------------> si está buscando un recurso determinado y no está disponible en el sistema.
+500 INTERNAL SERVER ERROR -> si el sistema falla.
+502 BAD GATEWAY -----------> si el servidor ha recibido una respuesta no válida del servidor ascendente.
+
+//La creación de versiones de las API es muy importante
+//El uso de la paginación es imprescindible cuando se expone una API que puede retornar grandes cantidades de datos
+
+Es buena práctica usar los parámetros limit y offset:
+- limit: valor numerico que representa la cantidad de resultados a retornar.
+- offset: valor númerico que representa la posición desde la cual se va a retornar la cantidad de valores definido en limit
+
+//Swagger
+Swagger es una especificación abierta para definir las API REST. El documento Swagger especifica la lista de recursos que están disponibles en la API REST y las operaciones que se pueden llamar en
+esos recursos.
+
+//Postman 
+Permite a los desarrolladores crear, compartir, probar y documentar API.
+Es una plataforma para diseñar, probar y depurar API, lo que significa que permite a los desarrolladores crear solicitudes HTTP personalizadas y
+ver las respuestas del servidor de una manera intuitiva y fácil de usar
+
+//curl 
+ es una librería de funciones para conectar con servidores para trabajar con ellos. El trabajo se realiza con formato URL. Es una herramienta válida para simular las acciones de usuarios en un navegador web.
+
+
